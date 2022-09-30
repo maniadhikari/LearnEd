@@ -1,0 +1,311 @@
+<!-- wp:paragraph -->
+<p>There are several kinds of programming paradigms, each with its own purposes and advantages. One of these is functional programming, which has a strong mathematical foundation to it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Here we cover functional programming languages and example languages. You’ll learn everything from functional programming concepts to the applications of this paradigm.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="what-is-functional-programming">What is Functional Programming?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Functional programming is a&nbsp;<a href="https://hackr.io/blog/programming-paradigms">programming paradigm</a>&nbsp;where composing functions becomes the main driving force behind the development. It is a declarative type of programming style that focuses on what to solve rather than how to solve.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The first high-level functional programming language, developed in the 1950s, was LISP. This language laid the foundation for many characteristics of modern functional programming languages. Over the decades, new languages and concepts began to be introduced, resulting in the many benefits of functional programming that we have today.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It is also worth noting that there is the concept of “pure vs. impure functional programming.” The exact differences are hard to define, but an impure functional paradigm is when techniques from other paradigms are used. There is no clear consensus on this subject.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Lambda calculus plays an important part in the functional paradigm. But before we go into that, here’s a table that summarizes the differences between functional programming and object-oriented programming.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><tbody><tr><td>Functional Programming</td><td>OOP</td></tr><tr><td>Immutable data</td><td>Mutable data</td></tr><tr><td>Declarative Programming</td><td>Imperative Programming</td></tr><tr><td>Focuses on the “what” of a problem</td><td>Focuses on the “how” of a problem</td></tr><tr><td>Uses recursions, avoids loops</td><td>Uses loops</td></tr><tr><td>Supports Parallel Programming</td><td>Not suitable for Parallel Programming</td></tr><tr><td>Execution order of statements is not very important</td><td>Execution order of statements is important</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
+<h2 id="lambda-calculus">Lambda Calculus</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Developed by Alonzo Church, lambda calculus is a formal system for studying computations with functions, and forms the basis of almost all of the functional programming languages in use. It is used to notate functions and more.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In terms of its computational ability, lambda calculus is similar to the Turing machine that laid the foundation for the imperative style of programming.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In a nutshell, it is a theoretical framework that describes functions and their evaluation.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="functional-programming-languages">Functional Programming Languages</h2>
+<!-- /wp:heading -->
+
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="https://hackr.io/blog/media/functional-programming-languages.png" alt="Functional Programming Languages"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Clojure, Common Lisp, Erlang, Haskell, and Scala are some notable&nbsp;<a href="https://hackr.io/blog/what-is-programming-language">programming languages</a>&nbsp;that follow the functional programming approach.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="is-python-a-functional-programming-language">Is Python a Functional Programming Language?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>No, Python is not a purely functional programming language, though it does have some of the characteristic concepts. It is more of an unofficial multi-paradigm language and it is possible to use in a way that is typically functional.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="is-c-a-functional-programming-language">Is C++ a Functional Programming Language?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Like Python, C++ is also a multi-paradigm language. C++ 11 supports lambdas and has a number of related tools. C++ supports procedural, object-oriented and generic programming and, more recently, functional programming. An example of functional programming in C++ is as follows:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code><strong>void</strong> <strong>Foo</strong>()
+
+{
+
+  vector&lt;<strong>int</strong>&gt; v;
+
+  v.push_back(1);
+
+  v.push_back(2);
+
+  v.push_back(3);
+
+  for_each(begin(v), end(v), &#91;](<strong>int</strong> i) {
+
+    cout &lt;&lt; i &lt;&lt; " ";
+
+  });
+
+}
+
+// Outputs:
+
+// 1 2 3</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading -->
+<h2 id="what-is-haskell-used-for">What is Haskell Used For?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Haskell is a purely functional programming language that is often used in research and academia. Some applications of Haskell are the Cardano blockchain and Meta’s anti-spam programs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Here’s a functional programming example in Haskell:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>-- &#91;&#91;Type signature|Type annotation]] (optional, same <strong>for</strong> each implementation)
+
+factorial :: (Integral a) =&gt; a -&gt; a
+
+
+
+
+-- Using recursion (with the "ifthenelse" expression)
+
+factorial n = <strong>if</strong> n &lt; 2
+
+              then 1
+
+              <strong>else</strong> n * factorial (n - 1)
+
+
+
+
+-- Using recursion (with pattern matching)
+
+factorial 0 = 1
+
+factorial n = n * factorial (n - 1)
+
+
+
+
+-- Using recursion (with guards)
+
+factorial n
+
+   | n &lt; 2     = 1
+
+   | otherwise = n * factorial (n - 1)
+
+
+
+
+-- Using a list <strong>and</strong> the "product" function
+
+factorial n = product &#91;1..n]
+
+
+
+
+-- Using fold (implements "product")
+
+factorial n = foldl (*) 1 &#91;1..n]
+
+
+
+
+-- Point-free style
+
+factorial = foldr (*) 1 . enumFromTo 1</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading -->
+<h2 id="characteristics-of-functional-programming">Characteristics of Functional Programming</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 id="1-pure-functions">1. Pure Functions</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Pure functions have two important properties:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>They always produce the same output with the same arguments irrespective of other factors. This property is also known as immutability.</li><li>They are deterministic. Pure functions either give some output or modify any argument or global variables i.e. they have no&nbsp;<a href="https://en.wikipedia.org/wiki/Side_effect_(computer_science)">side effects</a>.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Because pure functions have no side effects or hidden I/O, programs built using functional paradigms are easy to debug. Moreover, pure functions make writing concurrent applications easier.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>When the code is written using the functional programming style, a capable compiler is able to:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Memorize the results</li><li>Parallelize the instructions</li><li>Wait for evaluating results</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 id="2-recursion">2. Recursion</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In the functional programming paradigm, there are no for and while loops. Instead, these languages rely on recursion for iteration. Recursion is implemented using recursive functions, which call themselves repeatedly until the base case is reached.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 id="3-referential-transparency">3. Referential Transparency</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Variables, once defined in a functional programming language, aren’t allowed to change the value that they hold. This is known as referential transparency. It ensures that the same language expression gives the same output.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Assignment statements are discouraged in functional programming. For storing additional values in a program developed using the functional paradigm, new variables must be defined. The state of a variable in such a program is constant at any moment in time.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Referential transparency eliminates the slightest chances of any undesired effects, as any variable can be replaced with its actual value at any point during the program execution.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 id="4-functions-are-first-class-and-can-be-higher-order">4. Functions are First-Class and Can be Higher-Order</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Functions in the functional programming style are treated as variables. This makes them first-class functions. These can be passed to other functions as parameters or returned from functions or stored in data structures.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A higher-order function is a function that takes other functions as arguments and/or returns functions. First-class functions can be higher-order functions in functional programming languages.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 id="5-immutability">5. Immutability</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Variables are immutable, i.e., it isn’t possible to modify one once it has been initialized. However, we can create a new variable. The immutable nature of variables helps preserve the state throughout the program.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2><img src="https://hackr.io/blog/media/pros-and-cons-of-functional-programming.png" alt="Pros and cons of Functional Programming" width="960" height="540"></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading -->
+<h2 id="functional-programming-advantages">Functional Programming Advantages</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>There are advantages to functional programming, as seen below:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><strong>Comprehensibility:&nbsp;</strong>Pure functions don’t change states and are entirely dependent on input, and are consequently simple to understand.</li><li><strong>Concurrency:</strong>&nbsp;As pure functions avoid changing variables or any data outside it, concurrency implementation is easier.</li><li><strong>Lazy evaluation:&nbsp;</strong>Functional programming encourages lazy evaluation, which means that the value is evaluated and stored only when required.</li><li><strong>Easier debugging and testing:</strong>&nbsp;Pure functions take arguments once and produce unchangeable output. With immutability and no hidden output, debugging and testing becomes easier.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 id="functional-programming-disadvantages">Functional Programming Disadvantages</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Like other programming paradigms, functional programming also has downsides. These are:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Potentially poorer performance: Immutable values combined with recursion might lead to a reduction in performance.</li><li>Coding difficulties:Though writing pure functions is easy, combining it with the rest of the application and I/O operations can be tough.</li><li>No loops can be challenging:Writing programs in a recursive style instead of loops can be a daunting task.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 id="functional-programming-applications">Functional Programming Applications</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>So what is functional programming used for?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Generally, functional programming is widely employed in applications focusing on concurrency or parallelism, and carrying out mathematical computations.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Functional programming languages are often preferred for academic purposes, rather than commercial software development. Nevertheless, several prominent functional languages like Clojure, Erlang, F#, Haskell, and Racket, are used for developing a variety of commercial and industrial applications.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For example, WhatsApp makes use of Erlang, a programming language following the functional programming paradigm, to manage data belonging to over 1.5 billion people.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Another important torchbearer of the functional programming style is&nbsp;<a href="https://hackr.io/tutorials/learn-haskell">Haskell</a>, which is used by Facebook in its anti-spam system. Even JavaScript, one of the most widely used programming languages, flaunts the properties of a dynamically typed functional language.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Moreover, the functional style of programming is essential for various programming languages to lead in distinct domains - like R in statistics and J, K, and Q in financial analysis. Even used by domain-specific declarative languages such as Lex/Yacc and SQL for eschewing mutable values.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 id="conclusion">Conclusion</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>While not common in software development, functional programming has its use cases. It is also possible to establish the functional approach of programming in non-functional programming languages too. C++11, C# 3.0, and Java 8 added constructs for facilitating the functional style. One of the most notable examples of an imperative programming language using the functional style of programming is the&nbsp;<a href="https://hackr.io/tutorials/learn-scala">Scala programming language</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Now that you know what functional programming is, you might want to learn more about other programming paradigms, like&nbsp;<a href="https://hackr.io/blog/procedural-programming">procedural programming</a>. Or maybe you’d like to learn how to program. We at Hackr.io wish you good luck on your programming journey!</p>
+<!-- /wp:paragraph -->
